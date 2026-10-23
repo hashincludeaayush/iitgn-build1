@@ -1,9 +1,3 @@
-# SAMPLE: a subset of the Kalpa Health data pack
-
-This folder holds a few files of each kind so the starter notebooks run out of the box. Replace the whole folder with the full data pack when it is released; its MANIFEST.json replaces this one.
-
----
-
 # Kalpa Health data pack
 
 Exports from Kalpa Health's six source systems plus the patient master and the city plan, as received. Nothing has been cleaned. Profile every file before you trust it.

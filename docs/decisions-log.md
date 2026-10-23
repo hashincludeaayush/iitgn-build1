@@ -8,15 +8,15 @@ Every act of cleaning is a decision with a reason and an effect. Input equals cl
 |---|---|---|---|---|---|---|---|---|
 | 0 | raw as received | | | | | | | |
 | 1 | | | | | | | | |
-| 2 | booking validation | 25,069 | 24,993 | 76 | yes | 24,993 valid bookings; 58,362 booking-test rows were grouped into 25,069 booking records | Group 6 | 2026-10-23 |
+| 2 | booking validation | 567,986 | 564,879 | 3,107 | yes | 564,879 valid bookings from the current full-data run | Group 6 | 2026-10-23 |
 
 ## Decisions
 
 | # | Table | What we found | Decision (drop / default / keep and flag / map / split) | Reason | Rows affected | Effect on the headline | Reversible? | Owner |
 |---|---|---|---|---|---|---|---|---|
 | 1 | | | | | | | | |
-| 2 | bookings | 76 records failed model, booking-id or test-code validation. | drop from valid analysis; keep in rejects_bookings.csv | They do not satisfy the agreed data contract and cannot be safely repaired without source-system evidence. | 76 bookings | Valid booking headline is 25,069 -> 24,993; rejected records are excluded from valid counts. | yes, by reviewing the rejects and source contract | Group 6 (2026-10-23) |
-| 3 | bookings | Nova contains 500 records marked as reschedules. | keep until the visit identity rule is applied in notebook 03 | Loading and validation must be separated from the later business decision about superseded visits. | 500 bookings | No change yet; notebook 03 will decide the comparable visit count. | yes | Group 6 (2026-10-23) |
+| 2 | bookings | 3,107 records failed model, booking-id or test-code validation. | drop from valid analysis; keep in rejects_bookings.csv | They do not satisfy the agreed data contract and cannot be safely repaired without source-system evidence. | 3,107 bookings | Valid booking headline is 567,986 -> 564,879; rejected records are excluded from valid counts. | yes, by reviewing the rejects and source contract | Group 6 (2026-10-23) |
+| 3 | profiling | The current pack's representative files show different grains: bookings and results have multiple rows per booking, while invoices, payment IDs and patient IDs are unique in the profiled files. | keep raw files unchanged; use the profiled grain to choose later counts and joins | A row count is meaningful only at the correct grain. Notebook 02 and notebook 03 will validate the full pack before analysis. | representative files | No headline change; prevents later overcounting and incorrect join assumptions. | yes | Group 6 (2026-10-23) |
 
 ## Joins
 
