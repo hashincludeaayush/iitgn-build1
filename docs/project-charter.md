@@ -1,50 +1,51 @@
-# Project charter · Brief <LETTER> · Group <N>
+# Project charter · Objectives A, B and C · Group 6
 
 The charter is the one page a sponsor signs before work starts. It says what will be delivered, by whom, by when, with what, and what counts as done. Fill it in Scope and commit it before the first notebook. Change it later only by adding a dated line under "Changes", never by silent edit.
 
 | | |
 |---|---|
-| Project | Build 1 · Data to Insight in Kalpa Health · Brief <LETTER>, <name> |
+| Project | Build 1 · Data to Insight in Kalpa Health · Objectives A, B and C |
 | Sponsor | Dr Priya Menon, COO, Kalpa Health |
 | Reviewers | The finance controller (auditability); <the stakeholder your brief touches> |
-| Group | <N>: <member>, <member>, <member>, <member> |
+| Group | 6 |
 | Repository | <public URL> |
 | Working days | Three to four, ending with the presentation |
-| Charter committed on | <date> |
+| Charter committed on | 2026-10-23 |
 
 ## 1. The question, in the sponsor's words
 
-> <paste the quote>
+> Working sponsor question, inferred from Objectives A, B and C: What is happening to Kalpa Health's test volume, how much of the apparent change is real rather than a booking-system measurement effect, and where is the gap between invoices raised and cash collected?
 
 ## 2. The question, in ours
 
-<Two sentences: what she is really asking, and the decision it drives.>
+The sponsor needs one evidence-based view of growth, booking measurement and cash collection. We will decompose test-volume change into people, visits per person and tests per visit; compare legacy and Nova using a common booking definition and like-for-like periods; and reconcile invoices to captured payments, including unmatched and timing items. The answer determines whether the next action belongs primarily with operations, data governance during migration, or finance collections.
 
 ## 3. The deliverables
 
 | # | Deliverable | Form | Acceptance test |
 |---|---|---|---|
-| D1 | The claim | One sentence on slide 3, with a number, a denominator and a period | Dr Menon can say it to the board without a follow-up question she cannot answer |
-| D2 | The evidence | Notebooks 01 to 06 running cold; the SQL finance will re-run | A teammate's fresh-Codespace run produces the slide-3 number |
+| D1 | The claims | Three concise findings covering growth, booking comparability and invoiced-to-collected cash, each with a number, denominator and period | Dr Menon can repeat the findings without a follow-up question about the base or timeframe |
+| D2 | The evidence | Notebooks 01 to 06 running cold; SQL queries finance can re-run | A teammate's fresh-Codespace run produces the same clean-table counts and headline outputs |
 | D3 | The audit trail | approach, decisions, challenges logs | Every number traces to rows; every rule has a reason and an effect |
-| D4 | The action | Slide 6 | States what to do, what it costs, and what being wrong costs |
-| D5 | The write-ups and the video | docs/writeups.md, video link in README | One section and one segment per member, each in their own words |
+| D4 | The action | A prioritized recommendation for operations, data quality and collections | States what to do, what it costs, and what being wrong costs |
+| D5 | The write-ups and the video | docs/writeups.md, video link in README | The team's reasoning and limitations are documented |
 
 ## 4. Targets
 
 | Target | Measure | Owner |
 |---|---|---|
-| T1 Reproduce the 5 percent | Our growth figure, or the explained difference | |
-| T2 One sentence | Slide 3 | |
-| T3 Auditable | Decisions log reconciles at every step | |
-| T4 Reproducible | Cold run under ten minutes | |
-| T5 Defended | Any member, any number, alone | |
+| T1 Explain growth | Decompose test volume into people, visits per person and tests per visit | |
+| T2 Compare systems fairly | Report like-for-like legacy versus Nova booking measures and caveats | |
+| T3 Reconcile cash | Bridge invoices to captured payments and list unmatched or timing items | |
+| T4 Auditable | Decisions log reconciles at every step | |
+| T5 Reproducible | Cold run under ten minutes | |
+| T6 Defended | Any member, any number, alone | |
 
 ## 5. Scope
 
 | In | Out |
 |---|---|
-| | |
+| H1 2025 versus H1 2026 test-volume decomposition; comparable booking measures across legacy and Nova; invoice/payment reconciliation; data-quality exceptions; reproducible evidence and recommendations. | Causal claims not supported by the exports; patient-level clinical conclusions; changing raw records to force a match; analysis outside the available period and source systems. |
 
 ## 6. Roles and parts
 
@@ -66,16 +67,17 @@ The charter is the one page a sponsor signs before work starts. It says what wil
 
 | Assumption | What would prove it wrong | Where it appears if it does |
 |---|---|---|
-| The pack covers the whole first half of both years | A gap in the monthly counts | Slide 5, the caveat |
-| | | |
+| The pack covers the whole first half of both years | A gap in the monthly counts | Findings and caveat |
+| Booking-test rows can be rolled up to a comparable booking definition | Duplicate or missing booking identities that cannot be reconciled | System-comparison caveat |
+| Captured payment references can be normalized without guessing | Unmatched or ambiguous invoice references remain after normalization | Collections exception list |
 
 ## 9. Decision rights
 
 | Decision | Who makes it | By when |
 |---|---|---|
-| The identity rule for a booking | | Gate 1 |
-| The headline claim | | Gate 2 |
-| Freeze | | The evening before the presentation |
+| The identity rule for a booking | Group 6, documented in the decisions log | Before notebook 03 |
+| The headline claims | Group 6 after peer review | Before notebook 05 is frozen |
+| Freeze | Group 6 | The evening before the presentation |
 
 ## 10. Changes
 
