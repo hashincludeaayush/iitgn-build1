@@ -1,4 +1,4 @@
-# Build 1 starter kit · Data to Insight in Kalpa Health.abcd
+# Build 1 starter kit · Data to Insight in Kalpa Health.
 
 This folder is the skeleton of your group's repository. Copy it into a new public repository on the first day, before any analysis, and fill it as you go. Everything the panel reads lives here; nothing that lives only in a chat or on a laptop counts.
 
