@@ -1,14 +1,14 @@
-# Project statement · Objectives A, B and C · Group 6
+# Project statement · Objectives A, B and E · Group 6
 
 Written in Scope, before the data is opened. Updated when the data proves a line wrong, with the old line struck through rather than deleted, so the panel can see what you learned.
 
 ## 1. Dr Menon's words
 
-> Working sponsor question, inferred from the selected objectives: What is happening to Kalpa Health's test volume, how much of the apparent change is real rather than a booking-system measurement effect, and where is the gap between invoices raised and cash collected?
+> Working sponsor question, inferred from the selected objectives: What is happening to Kalpa Health's test volume, how much of the apparent change is real rather than a booking-system measurement effect, and did the campaign increase bookings beyond seasonality and patient mix?
 
 ## 2. The question in our words
 
-The sponsor needs one evidence-based view of growth, booking measurement and cash collection. We will decompose test-volume change into people, visits per person and tests per visit; compare legacy and Nova using a common booking definition and like-for-like periods; and reconcile invoices to captured payments, including unmatched and timing items. The answer determines whether the next action belongs primarily with operations, data governance during migration, or finance collections.
+The sponsor needs one evidence-based view of growth, booking measurement and campaign performance. We will decompose test-volume change into people, visits per person and tests per visit; compare legacy and Nova using a common booking definition and like-for-like periods; and compare campaign versus non-campaign bookings while accounting for seasonality, patient mix and segment differences. The answer determines whether the next action belongs primarily with operations, data governance during migration, or marketing experimentation.
 
 ## 3. The question she did not ask
 
@@ -20,7 +20,7 @@ What operational or commercial factors explain the observed change after the dat
 |---|---|---|
 | Test volume changed | The tree: people × visits per person × tests per visit | “Growth” must be separated into its measurable drivers. |
 | Legacy and Nova totals differ | The ladder and fair comparison | Raw rows are not comparable when the systems use different grains and reschedule rules. |
-| Invoiced cash differs from collected cash | The bridge and anti-joins | The gap must be split into unpaid, timing, unmatched and repeated-payment items. |
+| Campaign bookings differ from ordinary bookings | The fair comparison and segment grid | The apparent lift must be separated from seasonality, selection and mix shift. |
 
 ## 5. What does not transfer from Retail
 
@@ -42,7 +42,7 @@ Before profiling, dated 2026-10-23: we expect the apparent change in test volume
 |---|---|---|
 | F1 | Explain H1 2025 versus H1 2026 test-volume change. | Tree decomposition with counts, rates, periods and denominators. |
 | F2 | Compare legacy and Nova fairly. | Booking-level and test-level measures after common normalization, with reschedules addressed. |
-| F3 | Reconcile invoices and payments. | Bridge by count and rupee amount, plus unmatched and timing exception lists. |
+| F3 | Evaluate campaign/offer effectiveness. | Compare offer and non-offer bookings by period and segment, with selection and seasonality caveats. |
 | F4 | Preserve reproducibility and auditability. | Cold run, validation checks, rejected-record file and decision logs. |
 
 ### Non-functional: how well it must do it
@@ -69,12 +69,12 @@ Before profiling, dated 2026-10-23: we expect the apparent change in test volume
 |---|---|
 | H1 2025 versus H1 2026 test-volume decomposition | Causal explanations that require data not present in the pack |
 | Legacy/Nova booking comparability and data-quality reconciliation | Clinical interpretation of patient results |
-| Invoice-to-payment bridge and actionable exceptions | Unverified repair of ambiguous IDs |
+| Campaign/offer comparison and actionable experiment recommendations | Unverified repair of ambiguous IDs |
 | Reproducible clean tables, SQL and audit logs | Periods outside the released data |
 
 ## 9. Done looks like
 
-Done means a fresh run produces clean, reconciled tables and three defensible findings: what drove test-volume change, what part of the booking-system difference is measurement, and what explains the invoiced-to-collected gap. Each finding carries its denominator, period, caveat and action.
+Done means a fresh run produces clean, reconciled tables and three defensible findings: what drove test-volume change, what part of the booking-system difference is measurement, and whether the campaign produced evidence of lift beyond seasonality and mix. Each finding carries its denominator, period, caveat and action.
 
 ## 10. Who signs off
 

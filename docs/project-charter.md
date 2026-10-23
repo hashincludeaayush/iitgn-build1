@@ -1,10 +1,10 @@
-# Project charter · Objectives A, B and C · Group 6
+# Project charter · Objectives A, B and E · Group 6
 
 The charter is the one page a sponsor signs before work starts. It says what will be delivered, by whom, by when, with what, and what counts as done. Fill it in Scope and commit it before the first notebook. Change it later only by adding a dated line under "Changes", never by silent edit.
 
 | | |
 |---|---|
-| Project | Build 1 · Data to Insight in Kalpa Health · Objectives A, B and C |
+| Project | Build 1 · Data to Insight in Kalpa Health · Objectives A, B and E |
 | Sponsor | Dr Priya Menon, COO, Kalpa Health |
 | Reviewers | The finance controller (auditability); <the stakeholder your brief touches> |
 | Group | 6 |
@@ -14,17 +14,17 @@ The charter is the one page a sponsor signs before work starts. It says what wil
 
 ## 1. The question, in the sponsor's words
 
-> Working sponsor question, inferred from Objectives A, B and C: What is happening to Kalpa Health's test volume, how much of the apparent change is real rather than a booking-system measurement effect, and where is the gap between invoices raised and cash collected?
+> Working sponsor question, inferred from Objectives A, B and E: What is happening to Kalpa Health's test volume, how much of the apparent change is real rather than a booking-system measurement effect, and did the campaign increase bookings beyond seasonality and patient mix?
 
 ## 2. The question, in ours
 
-The sponsor needs one evidence-based view of growth, booking measurement and cash collection. We will decompose test-volume change into people, visits per person and tests per visit; compare legacy and Nova using a common booking definition and like-for-like periods; and reconcile invoices to captured payments, including unmatched and timing items. The answer determines whether the next action belongs primarily with operations, data governance during migration, or finance collections.
+The sponsor needs one evidence-based view of growth, booking measurement and campaign performance. We will decompose test-volume change into people, visits per person and tests per visit; compare legacy and Nova using a common booking definition and like-for-like periods; and compare campaign versus non-campaign bookings while accounting for seasonality, patient mix and segment differences. The answer determines whether the next action belongs primarily with operations, data governance during migration, or marketing experimentation.
 
 ## 3. The deliverables
 
 | # | Deliverable | Form | Acceptance test |
 |---|---|---|---|
-| D1 | The claims | Three concise findings covering growth, booking comparability and invoiced-to-collected cash, each with a number, denominator and period | Dr Menon can repeat the findings without a follow-up question about the base or timeframe |
+| D1 | The claims | Three concise findings covering growth, booking comparability and campaign effectiveness, each with a number, denominator and period | Dr Menon can repeat the findings without a follow-up question about the base or timeframe |
 | D2 | The evidence | Notebooks 01 to 06 running cold; SQL queries finance can re-run | A teammate's fresh-Codespace run produces the same clean-table counts and headline outputs |
 | D3 | The audit trail | approach, decisions, challenges logs | Every number traces to rows; every rule has a reason and an effect |
 | D4 | The action | A prioritized recommendation for operations, data quality and collections | States what to do, what it costs, and what being wrong costs |
@@ -36,7 +36,7 @@ The sponsor needs one evidence-based view of growth, booking measurement and cas
 |---|---|---|
 | T1 Explain growth | Decompose test volume into people, visits per person and tests per visit | |
 | T2 Compare systems fairly | Report like-for-like legacy versus Nova booking measures and caveats | |
-| T3 Reconcile cash | Bridge invoices to captured payments and list unmatched or timing items | |
+| T3 Evaluate campaign effect | Compare offer and non-offer bookings by period and segment, and separate lift from mix or seasonality | |
 | T4 Auditable | Decisions log reconciles at every step | |
 | T5 Reproducible | Cold run under ten minutes | |
 | T6 Defended | Any member, any number, alone | |
@@ -45,7 +45,7 @@ The sponsor needs one evidence-based view of growth, booking measurement and cas
 
 | In | Out |
 |---|---|
-| H1 2025 versus H1 2026 test-volume decomposition; comparable booking measures across legacy and Nova; invoice/payment reconciliation; data-quality exceptions; reproducible evidence and recommendations. | Causal claims not supported by the exports; patient-level clinical conclusions; changing raw records to force a match; analysis outside the available period and source systems. |
+| H1 2025 versus H1 2026 test-volume decomposition; comparable booking measures across legacy and Nova; campaign/offer comparison; data-quality exceptions; reproducible evidence and recommendations. | Causal claims not supported by the exports; patient-level clinical conclusions; changing raw records to force a match; analysis outside the available period and source systems. |
 
 ## 6. Roles and parts
 
@@ -83,4 +83,4 @@ The sponsor needs one evidence-based view of growth, booking measurement and cas
 
 | Date | What changed | Why | Who |
 |---|---|---|---|
-| | | | |
+| 2026-10-24 | Changed the selected objectives from A, B and C to A, B and E. | The project now focuses on test-volume growth, fair Legacy/Nova comparison and campaign/offer effectiveness; invoice/payment work remains documented data-quality groundwork rather than a headline objective. | Group 6 |
