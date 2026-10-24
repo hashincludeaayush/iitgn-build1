@@ -1,0 +1,13 @@
+analysis_period,source_city,city,retained_booking_records,retained_test_lines,mapping_applied
+H1_2025,Ahmedabad,Ahmedabad,33255,76480,False
+H1_2025,Bangalore,Bengaluru,43483,99438,True
+H1_2025,Chennai,Chennai,34764,79762,False
+H1_2025,Hyderabad,Hyderabad,31599,72828,False
+H1_2025,Jaipur,Jaipur,19513,44878,False
+H1_2025,Pune,Pune,26189,60225,False
+H1_2026,Ahmedabad,Ahmedabad,36083,84523,False
+H1_2026,Bengaluru,Bengaluru,45499,106973,False
+H1_2026,Chennai,Chennai,34130,80502,False
+H1_2026,Hyderabad,Hyderabad,33297,78131,False
+H1_2026,Jaipur,Jaipur,17144,40113,False
+H1_2026,Pune,Pune,27867,65141,False
