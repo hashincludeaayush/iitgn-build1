@@ -3,6 +3,10 @@
 **Updated:** 2026-10-24  
 **Status:** Working descriptive result selected by the team for Brief A. This is not an owner-confirmed official KPI.
 
+## Takeaway
+
+H1 2026 has **455,383** validated booking test lines versus **433,611** in H1 2025, so the increase is **5.02%**. The tree says this came from more people and more test lines per visit, partly offset by slightly fewer visits per person. This is a descriptive result, not a causal or clinical conclusion.
+
 ## Selected measure
 
 Use the existing IITGN Build 1 `bookings_clean.csv.gz` table. Count `n_tests` for each retained booking record and assign the record to the H1 containing its source-local `slot_at` date. Use the half-open periods `[2025-01-01, 2025-07-01)` and `[2026-01-01, 2026-07-01)`, including all of June 30.
