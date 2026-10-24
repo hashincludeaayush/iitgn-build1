@@ -1,4 +1,4 @@
-# Decisions log · cleaning and reconciliation · Brief <LETTER> · Group <N>
+# Decisions log · cleaning and reconciliation · Brief A · Group 6
 
 Every act of cleaning is a decision with a reason and an effect. Input equals clean plus rejected, every time. The headline number is recomputed after every decision so the bridge from raw to final is visible.
 
@@ -27,6 +27,7 @@ Every act of cleaning is a decision with a reason and an effect. Input equals cl
 | 8 | patients | 309,217 rows mapped to 303,153 people using normalized phone, name and DOB; 1,492 rows used placeholder DOB `1900-01-01`. | deduplicate for aggregate analysis; disclose placeholder-DOB limitation | The rule supports person-level counting but is not definitive identity verification for clinical communication. | 6,064 duplicate rows | 309,217 -> 303,153 analytical people; all booking patient IDs mapped. | yes | Group 6 (2026-10-24) |
 | 9 | invoices + payments | 470,776 invoices totalled Rs 737,020,069; payments included 455,469 captured and 18,038 failed rows. | normalize amounts and reconcile captured payments by normalized invoice reference | Invoice amounts were text and payment amounts were paise; units and references must be normalized before reconciliation. | 473,507 payment rows | 450,881 invoice/payment matches; 21,820 invoice-only and 4,588 payment-only rows. | yes | Group 6 (2026-10-24) |
 | 10 | captured payments | 1,925 invoices had more than one captured payment. | aggregate or investigate at invoice level; do not count payment rows as invoices | Multiple captures may be retries, partial payments or duplicate events. | 1,925 invoices | Preserves completed finance data-quality groundwork, although invoice/payment reconciliation is no longer a selected headline objective. | yes | Group 6 (2026-10-24) |
+| 11 | H1 test-volume growth | H1 2025 had 431,261 tests from 93,926 people and 187,771 bookings; H1 2026 had 452,933 tests from 97,501 people and 193,005 bookings. | use the multiplicative tree: people × visits per person × tests per visit | This separates the measurable drivers of total test growth and avoids attributing the change to one raw count. | 0 rows dropped; factor definitions applied to both periods | Tests increased 5.03%; people increased 3.81%, visits per person decreased 0.98%, and tests per visit increased 2.18%. The log branches multiplied back to total growth. | yes | Group 6 (2026-10-24) |
 
 ## Joins
 
