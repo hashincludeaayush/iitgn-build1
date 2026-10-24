@@ -1,6 +1,6 @@
 # notebooks
 
-Numbered in run order. Clear outputs before every commit. One owner per notebook at a time. Every notebook opens with CONFIG, follows MAP, DO, SEE, CHECK, SUM, and carries interview angles where a technique is used.aa
+Numbered in run order. Clear outputs before every commit. One owner per notebook at a time. Every notebook opens with CONFIG, follows MAP, DO, SEE, CHECK, SUM, and carries interview angles where a technique is used.
 
 | Notebook | Produces | Depends on | Teaches |
 |---|---|---|---|
