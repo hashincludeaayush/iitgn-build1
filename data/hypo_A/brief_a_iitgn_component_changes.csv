@@ -1,0 +1,6 @@
+metric,formula,unit_or_identity,H1_2025,H1_2026,absolute_change,percent_change,log_change_percent
+test_lines,sum(n_tests),test lines,433611.0,455383.0,21772.0,5.02109033211795,4.899100430558683
+people,nunique(person_id),distinct IITGN person_id values,94275.0,97827.0,3552.0,3.7677008750994334,3.698456941467327
+visits,nunique(booking_id),distinct unchanged booking_id values after superseded-record removal,188803.0,194020.0,5217.0,2.763197618681912,2.7257103117470765
+visits_per_person,visits / people,distinct bookings / distinct person_id values,2.0026836382922304,1.9832970447831375,-0.019386593509092886,-0.9680307532558996,-0.972746629720282
+test_lines_per_visit,test_lines / visits,sum(n_tests) / distinct booking_id values,2.296631939111137,2.3470930831873003,0.05046114407616331,2.1971802802539298,2.173390118811622

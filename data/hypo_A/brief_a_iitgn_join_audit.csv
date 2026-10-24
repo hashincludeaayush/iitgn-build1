@@ -1,0 +1,7 @@
+left_table,right_table,key,join_type,expected_cardinality,left_rows,right_rows,rows_after,matched_left_rows,unmatched_left_rows,unmatched_right_rows,duplicate_left_key_rows_expected_at_test_line_grain,duplicate_right_keys
+IITGN raw H1 2026 nonblank source test lines,IITGN validated H1 2026 booking keys,system + booking_id,LEFT,many_to_one; raw rows are test-line grain,461080,195519,461080,458924,2156,0,410088,0
+IITGN accepted H1 2026 bookings before superseded-record rule,IITGN retained H1 2026 clean bookings,system + booking_id,LEFT,one_to_one,195519,194020,195519,194020,1499,0,0,0
+IITGN full clean bookings,kalpa_healt source city grouped by exact booking key,system + booking_id,LEFT,one_to_one after grouping raw source test rows to booking key,563380,568007,563380,557994,5386,10013,0,0
+IITGN full clean bookings,kalpa_healt source city grouped by IITGN-trimmed booking key,system + booking_id.str.strip(),LEFT,one_to_one after checking there are no normalized key collisions,563380,568007,563380,563380,0,4627,0,0
+IITGN H1 2026 actual city-months (exact_source_labels),H1 2026 plan city-months (exact_source_labels),city + month,FULL OUTER,one_to_one,36,36,42,30,6,6,0,0
+IITGN H1 2026 actual city-months (IITGN_Bangalore_to_Bengaluru_alias),H1 2026 plan city-months (IITGN_Bangalore_to_Bengaluru_alias),city + month,FULL OUTER,one_to_one,36,36,36,36,0,0,0,0
