@@ -131,7 +131,7 @@ Trace one real event through both systems, describe how each system records it, 
 
 #### 3. Why were superseded Nova bookings removed?
 
-Nova creates a new booking when a visit is rescheduled and marks the old one as rescheduled. Legacy changes the existing booking instead. Keeping both Nova records would count one visit twice, so `1,499` superseded originals were removed. The comparable population became `563,380` bookings and `1,303,719` tests.
+Nova creates a new booking when a visit is rescheduled and marks the old one as rescheduled. Legacy changes the existing booking instead. Keeping both Nova records would count one visit twice, so `1,499` superseded originals were removed. The comparable population became `563,380` bookings and `1,303,719` tests in the earlier cleaning run.
 
 #### 4. What do `left`, `validate='one_to_one'` and `indicator=True` mean?
 
@@ -169,7 +169,7 @@ Start with `EXPLAIN ANALYZE`. Check whether the cost is a full scan, sort, join 
 
 #### 4. Which Pandas number should SQL reproduce for Brief A?
 
-SQL should reproduce the H1 2025 and H1 2026 booking, people and test totals, then calculate the same three factors: people, visits per person and tests per visit. The result should agree with Pandas: `431,261` versus `452,933` tests and `+5.03%` growth. If it differs, check the date boundaries, grain, rejected rows and person identity mapping before changing either result.
+SQL should reproduce the H1 2025 and H1 2026 booking, people and test totals, then calculate the same three factors: people, visits per person and tests per visit. The result should agree with Pandas: `433,611` versus `455,383` test lines and `+5.02%` growth. If it differs, check the date boundaries, grain, rejected rows and person identity mapping before changing either result.
 
 #### 5. Why are raw rejected or unmatched records not hidden by database constraints?
 
@@ -189,7 +189,7 @@ It separates total test growth into three understandable drivers. People means d
 
 #### 2. What did the tree show?
 
-H1 2025 had `431,261` tests, `93,926` people and `187,771` bookings. H1 2026 had `452,933` tests, `97,501` people and `193,005` bookings. Tests grew `5.03%`; people grew `3.81%`; visits per person fell `0.98%`; and tests per visit grew `2.18%`.
+H1 2025 had `433,611` validated booking test lines, `94,275` people and `188,803` visit proxies in H1 2025. H1 2026 had `455,383` test lines, `97,827` people and `194,020` visit proxies. Test lines grew `5.02%`; people grew `3.77%`; visits per person fell `0.97%`; and test lines per visit grew `2.20%`.
 
 #### 3. Why use log growth?
 
@@ -207,7 +207,7 @@ The conclusion depends on the person identity rule, the completeness of the H1 d
 
 #### 1. What is the final board number?
 
-The board number is `+5.0%`, rounded from the exact `+5.03%`. It compares `452,933` tests in H1 2026 with `431,261` tests in H1 2025. The denominator is the H1 2025 test total, and the unit is tests on cleaned booking records.
+The board number is `+5.0%`, rounded from the exact `+5.02%`. It compares `455,383` validated booking test lines in H1 2026 with `433,611` in H1 2025. The denominator is the H1 2025 test total, and the unit is validated booking test lines.
 
 #### 2. What makes the final claim defensible?
 

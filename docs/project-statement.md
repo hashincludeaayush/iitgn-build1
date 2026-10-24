@@ -31,7 +31,21 @@ What operational or commercial factors explain the observed change after the dat
 
 ## 6. Our prediction, before the data
 
-Before profiling, dated 2026-10-23: we expect the apparent change in test volume to be a combination of patient volume, visit frequency and tests per visit rather than one single driver. We also expect some legacy-versus-Nova difference to be measurement-related because the source systems have different grains, and we expect the invoiced-to-collected gap to include timing and unmatched-reference items.
+Before profiling, dated 2026-10-23: we expected the apparent change in test volume to be a combination of patient volume, visit frequency and tests per visit rather than one single driver. We also expected some legacy-versus-Nova difference to be measurement-related because the source systems have different grains. The Brief-A result now supports the first two points as descriptive findings; the source-system and booking-line limitations remain caveats, not causal explanations.
+
+## 6a. What the Hypo A files show now
+
+The saved Hypo A results support the prediction as a description of the data: validated booking test lines rose from **433,611** in H1 2025 to **455,383** in H1 2026 (**+5.02%**). People rose **3.77%**, visits per person fell **0.97%**, and test lines per visit rose **2.20%**. This describes the pattern; it does not prove why the pattern happened. The measure counts validated booking test lines, not confirmed attended or performed tests.
+
+## 6b. Team ownership
+
+| Member | Brief-A responsibility | Main evidence |
+|---|---|---|
+| Aayush | Own the integrated Brief-A answer and keep the final project package consistent | Notebook 05 methods, Notebook 06 cold run, charter, statement, logs, diagrams, write-ups and board artifact |
+| Harsh | Own the Hypo-A recalculation and the evidence for the selected drivers | IITGN-aligned metric summary, component changes, city contributions, identity checks and reconciliation |
+| Riya | Own loading, validation, cleaning checks and reproducibility | Profiling, accepted/rejected reconciliation, SQL reproduction, join checks and cold-run validation |
+
+All three members review the metric definition, reproduce the headline numbers and can explain the limitations. A booking test line is the selected descriptive measure for this submission; it is not presented as an attended, collected or performed test.
 
 ## 7. Requirements
 

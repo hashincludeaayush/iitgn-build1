@@ -6,7 +6,7 @@ The charter is the one page a sponsor signs before work starts. It says what wil
 |---|---|
 | Project | Build 1 · Data to Insight in Kalpa Health · Brief A |
 | Sponsor | Dr Priya Menon, COO, Kalpa Health |
-| Reviewers | The finance controller (auditability); <the stakeholder your brief touches> |
+| Reviewers | The finance controller (auditability); the operations/KPI owner for the Brief-A definition |
 | Group | 6 |
 | Repository | <public URL> |
 | Working days | Three to four, ending with the presentation |
@@ -34,11 +34,11 @@ The sponsor needs one evidence-based explanation of test-volume growth. We will 
 
 | Target | Measure | Owner |
 |---|---|---|
-| T1 Explain growth | Decompose test volume into people, visits per person and tests per visit | |
-| T2 Validate the decomposition | Confirm the three factors multiply back to total test growth | |
-| T4 Auditable | Decisions log reconciles at every step | |
-| T5 Reproducible | Cold run under ten minutes | |
-| T6 Defended | Any member, any number, alone | |
+| T1 Explain growth | Decompose test volume into people, visits per person and tests per visit | Aayush |
+| T2 Validate the decomposition | Confirm the three factors multiply back to total test growth | Harsh |
+| T4 Auditable | Decisions log reconciles at every step | Riya |
+| T5 Reproducible | Cold run under ten minutes | Riya |
+| T6 Defended | Any member, any number, alone | All members |
 
 ## 5. Scope
 
@@ -50,7 +50,9 @@ The sponsor needs one evidence-based explanation of test-volume growth. We will 
 
 | Member | Part owned | Notebooks | Also responsible for |
 |---|---|---|---|
-| | | | |
+| Aayush | Brief-A integration and final answer | 05_methods, 06_answer_cold_run | Keep the current Hypo-A result consistent across the charter, statement, logs, diagrams, write-ups and board artifact; coordinate the final narrative and presentation |
+| Harsh | Hypo-A metric recalculation and driver evidence | 05d_brief_a_iitgn_alignment and supporting metric outputs | Maintain the retained booking-line definition, component changes, city contributions and reconciliation; explain the selected result and its limitations |
+| Riya | Data loading, validation and reproducibility | 01_profile, 02_load_parallel_validate, 03_clean_reconcile, 04_sql_transformations | Maintain accepted/rejected reconciliations, join checks, SQL reproduction and the cold-run workflow; preserve exceptions rather than silently repairing them |
 
 ## 7. Risks, and what we do about them
 
@@ -83,3 +85,4 @@ The sponsor needs one evidence-based explanation of test-volume growth. We will 
 | Date | What changed | Why | Who |
 |---|---|---|---|
 | 2026-10-24 | Narrowed the selected scope from A, B and E to Brief A only. | The final analysis will focus only on the H1 test-volume growth decomposition; booking comparison, campaign analysis and invoice/payment work are supporting groundwork, not headline objectives. | Group 6 |
+| 2026-10-24 | Adopted the Hypo A recalculation as the current descriptive result. | It uses the saved IITGN-aligned metric summary and makes the date window, booking-line measure and identity rule explicit. | Group 6 |

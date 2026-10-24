@@ -1,10 +1,14 @@
-# A/B/E analysis plan and pre-outcome predictions
+# Brief A analysis plan and Hypo A result
 
 **Status:** Working draft authored 2026-10-24. Hypotheses retain their original prediction labels and authored dates. The user later selected the IITGN Build 1 cleaning rule for the current Brief A calculations; the dated addendum at the end records the redefinition and measured values. Earlier Brief A candidate sections remain historical and are not the current primary values. The IITGN-aligned measure is still not owner-confirmed as the official KPI.
 
+## Current result
+
+Hypo A currently shows **455,383** validated booking test lines in H1 2026 versus **433,611** in H1 2025, a **5.02% increase**. The increase combines **3.77% more people**, **0.97% fewer visits per person**, and **2.20% more test lines per visit**. These are descriptive results, not causal proof. The saved CSV files in `data/hypo_A/` are the evidence used for this summary.
+
 ## Scope, decisions, and governance
 
-The team is considering Brief A (Growth), Brief B (Two Cities), and Brief E (The Offer). This plan treats them as candidate briefs, not as an approved change to project scope. The handbook describes one brief per group and a six-slide deliverable. Confirm whether the team is answering one brief or all three, and how the six-slide limit applies, before creating presentation content.
+The selected work is Brief A only. Brief B and Brief E are outside the current scope. This plan records the question, the checks, the prediction and the evidence used for the H1 test-volume comparison.
 
 The decisions are: (A) how to allocate test-volume resources against the city plan; (B) whether to change targets or staffing in the affected cities; and (E) whether to increase the offer budget. The analysis should first verify each metric and baseline, locate any change, test the customer journey and documented operational changes, then choose a primary metric, a few diagnostics and guardrails, the simplest distinguishing method, and an action. No action recommendation is made here.
 
