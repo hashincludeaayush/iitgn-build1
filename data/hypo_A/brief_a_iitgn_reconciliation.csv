@@ -1,0 +1,3 @@
+period,source_rows_including_blank_test_code,blank_test_code_rows_classified,nonblank_source_test_lines,validation_rejected_test_lines,validated_test_lines_before_reschedule_rule,superseded_records_removed,test_lines_on_superseded_records_removed,retained_booking_records,retained_test_lines_primary,source_rows_reconcile
+H1 2025,436302,422,435880,2269,433611,0,0,188803,433611,True
+H1 2026,461523,443,461080,2156,458924,1499,3541,194020,455383,True

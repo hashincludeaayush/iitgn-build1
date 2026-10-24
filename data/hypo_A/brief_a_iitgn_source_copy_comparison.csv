@@ -1,0 +1,3 @@
+period,kalpa_source_rows,iitgn_flattened_rows,kalpa_nonblank_test_code_lines,iitgn_nonblank_test_code_lines,kalpa_blank_test_code_rows,iitgn_blank_test_code_rows,kalpa_only_booking_keys,iitgn_only_booking_keys,nonblank_lines_on_kalpa_only_keys,nonblank_lines_on_iitgn_only_keys,kalpa_only_keys_all_blank_code
+H1 2025,436302,436302,435880,435880,422,422,0,0,0,0,False
+H1 2026,461544,461523,461080,461080,464,443,21,0,0,0,True

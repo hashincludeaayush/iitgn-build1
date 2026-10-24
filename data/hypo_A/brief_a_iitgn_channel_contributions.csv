@@ -1,0 +1,5 @@
+system,channel,booking_records_H1_2025,booking_records_H1_2026,test_lines_H1_2025,test_lines_H1_2026,booking_records_change,booking_records_change_pct,test_lines_change,test_lines_change_pct
+legacy,clinic,124485.0,92259.0,285445.0,216494.0,-32226.0,-25.88745632003856,-68951.0,-24.155616668710255
+legacy,home,64318.0,76782.0,148166.0,180119.0,12464.0,19.378712024627642,31953.0,21.565676336001506
+nova,clinic,0.0,14980.0,0.0,35212.0,14980.0,,35212.0,
+nova,home,0.0,9999.0,0.0,23558.0,9999.0,,23558.0,

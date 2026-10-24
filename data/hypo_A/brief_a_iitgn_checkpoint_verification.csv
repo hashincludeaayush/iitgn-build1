@@ -1,0 +1,3 @@
+period,stored_05a_nonblank_source_test_lines,recounted_iitgn_source_nonblank_test_lines,difference,checkpoint_matches,previous_build_source_rows_including_blank_code,IITGN_flattened_source_rows_including_blank_code,difference_in_all_source_rows,previous_build_blank_code_rows,IITGN_flattened_blank_code_rows,difference_in_blank_code_rows,IITGN_clean_test_lines_after_validation_and_reschedule_rule,change_from_05a_candidate
+H1 2025,435880,435880,0,True,436302,436302,0,422,422,0,433611,-2269
+H1 2026,461080,461080,0,True,461544,461523,-21,464,443,-21,455383,-5697
